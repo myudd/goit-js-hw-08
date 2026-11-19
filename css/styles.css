@@ -8,6 +8,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
+    max-width: 1128px;
+    margin: 0 auto;
+    padding: 24px 0;
+
 }
 .gallery-item{
     width: 360px;
@@ -17,6 +21,10 @@
     align-items: start;
     justify-content: center;
     overflow: hidden;
+    transition: transform 250ms linear;
+}
+.gallery-item:hover{
+    transform: scale(101%);
 }
 .gallery-image{
     width: 100%;
