@@ -80,8 +80,8 @@ galleryBox.insertAdjacentHTML("afterbegin", markup);
 
 galleryBox.addEventListener('click', (event) => {
     event.preventDefault();
-    if (!event.target.classList.contains("gallery")) {
-        let source = event.target.getAttribute("data-source");
+    let source = event.target.getAttribute("data-source");
+    if (event.target.nodeName === "IMG") {
         basicLightbox.create(`<img class="current-img" src="${source}">`).show();
     } else {
         return;
