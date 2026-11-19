@@ -79,9 +79,9 @@ const markup = images.map((img) => (
 galleryBox.insertAdjacentHTML("afterbegin", markup);
 
 galleryBox.addEventListener('click', (event) => {
-    event.preventDefault();
     let source = event.target.getAttribute("data-source");
     if (event.target.nodeName === "IMG") {
+        event.preventDefault();
         basicLightbox.create(`<img class="current-img" src="${source}">`).show();
     } else {
         return;
